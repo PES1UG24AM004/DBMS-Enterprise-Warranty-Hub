@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #000000;
+  --bg-secondary: #08080D;
+  --bg-card: #0D0D12;
+  --bg-elevated: #12121A;
+  --border-subtle: #252530;
+  --accent-primary: #00F0FF;
+  --accent-secondary: #FF3D81;
+  --accent-tertiary: #B88AFF;
+  --text-main: #F5F5F7;
+  --text-secondary: #9292A3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #000000;
+  color: #F5F5F7;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08080D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252530;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a4c;
+}
+
+/* Cyberpunk technical micro-badge */
+.badge-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}

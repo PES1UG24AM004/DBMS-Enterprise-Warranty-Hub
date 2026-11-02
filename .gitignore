@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs & caches
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# Local Hugging Face / Transformers model cache
+.cache/
+cache/
+onnx/
+models/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# OS / Editor
+.DS_Store
+*.pem
+.vscode/
+.idea/
+Thumbs.db

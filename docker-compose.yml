@@ -1,0 +1,21 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: ewh-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: enterprise_warranty
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - ewh_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d enterprise_warranty"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  ewh_pgdata:
